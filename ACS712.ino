@@ -31,7 +31,7 @@ void setup()
   // Read the analog input a few times to makes sure that we get
   // a good zero adjustment from nominal center value. There should be no
   // current flowing while this is happening.
-  for (uint8_t i=0; i<10; i++)
+  for (uint8_t i=1; i<=10; i++)
   {
     uint16_t error = 512 - analogRead(SENSOR_PIN);
     sensorZeroAdj = ((sensorZeroAdj * (i-1)) + error)/i;
